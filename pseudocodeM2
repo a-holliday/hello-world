@@ -1,0 +1,3 @@
+Description: create a modified version of blackjack, user is dealt two cards, dealer is dealt one card.
+             user is given chance to hit until bust or hold, afterwards dealer hits until it beats user
+             or busts.
