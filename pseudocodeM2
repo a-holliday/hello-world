@@ -1,3 +1,77 @@
 Description: create a modified version of blackjack, user is dealt two cards, dealer is dealt one card.
              user is given chance to hit until bust or hold, afterwards dealer hits until it beats user
              or busts.
+
+Add packages to randomize
+create list representing deck
+// going to need some point handling system for cards (dictionary?)
+// need to keep track of bets wins and losses
+
+
+class gamePlay()
+    startCash = 0
+    betCash = 0
+    choice = ""
+    startMenu()
+         print("Welcome to BlackJack!"
+        startCash = input(Press a to pick starting funds (10 to 500), b to quit)
+            if a
+                betCash input(Place starting bet (10 to 500)
+                funds = input
+                create player (startCash, betCash)
+
+
+            else if b
+                end game
+            else
+                startMenu()
+     round()
+        playerPoints = deal(2)
+        dealerPoints = deal(1)
+        while player choice2 is hit
+            choice2 = input (Stand or hit)
+            playerPoints += deal(1)
+            if playerPoints = 21
+                startCash += betCash
+            else if playerPoints > 21
+                startCash - betCash
+                break
+            if choice 2 is 
+
+
+
+
+    continueMenu()
+        print
+
+class pointSystem()
+        dictionary of cards to points
+        playerPoints
+        dealerPoints
+
+class player ( startCash, betCash)
+        hand[] = ""
+        call deal (2)
+
+method gameOver()
+    if startCash = 0
+
+class dealer
+
+    1. while incorrect input given display
+        choice 1 play
+            method deal(1) for dealer
+            assign points to dealerScore variable
+            deal(2) for player
+            assign point to playerScore variable
+            ask user for input on holding or hitting (control for input error)
+            if hold
+                deal(1) for dealer
+                    add card score to dealerScore
+                    if dealerScore > playerScore and less than 21
+                        print dealer wins
+
+        choice 2 quit
+        if choice 1
+        else if choice 2
+            end program
