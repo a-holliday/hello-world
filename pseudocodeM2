@@ -8,70 +8,98 @@ create list representing deck
 // need to keep track of bets wins and losses
 
 
-class gamePlay()
-    startCash = 0
-    betCash = 0
-    choice = ""
-    startMenu()
+    func gamePlay()
+        startCash = 0
+        betCash = 0
+        choice = ""
+    func startMenu()
          print("Welcome to BlackJack!"
-        startCash = input(Press a to pick starting funds (10 to 500), b to quit)
+        currentCash = input(Press a to pick starting funds (10 to 500), b to quit)
             if a
-                betCash input(Place starting bet (10 to 500)
-                funds = input
-                create player (startCash, betCash)
-
-
+                createPlayers()
+                round()
             else if b
                 end game
             else
+                print ("invalid choice")
                 startMenu()
-     round()
+     func createPlayers()
+        betCash = 0
+        while betCash <= currentCash
+            betCash = input(Place starting bet (10 to 500)
+            break
+            if betCash > currentCash
+                Print "Not enough cash for that!"
+        create player (currentCash, betCash)
+        create dealer()
+
+
+     func round()
+
+        player.hand = deal(2)
+        player.displayHand()
+        player.displayPoints()
+        dealer.hand = deal(1)
+        dealer.displayHand()
+        dealer.displayPoints()
         playerPoints = deal(2)
         dealerPoints = deal(1)
         while player choice2 is hit
             choice2 = input (Stand or hit)
             playerPoints += deal(1)
             if playerPoints = 21
-                startCash += betCash
+                currentCash += betCash
             else if playerPoints > 21
-                startCash - betCash
+                currentCash -= betCash
                 break
-            if choice 2 is 
+        if choice 2 is stand
+                while dealer.points <= player.points
+                    dealer.hand + = deal(1)
+                    dealer.displayPoints()
+                    if dealer.points == 21
+                        print("Dealer busts! You win")
+                        currentCash += betCash
+                        roundOver()
+                 if dealer.points > player.points
+                        print("You lost!")
+                        currentCash -= betCash
+                        roundOver()
 
 
 
 
-    continueMenu()
+    func continueMenu()
         print
 
+    func deal(num)
+        for i =0 i< num i++
+            card[i] = deck[randomized index out of remaining no of cards]
+            pop equivalent of card i from deck
+            decrement remaining cards
+
 class pointSystem()
-        dictionary of cards to points
-        playerPoints
-        dealerPoints
+        cardPoints = dictionary of cards to points
 
-class player ( startCash, betCash)
+
+class player ( currentCash, betCash)
+        points = 0
         hand[] = ""
-        call deal (2)
+        displayHand()
+            print(hand[])
+        displayPoints()
+        for i in hand[]
+            points += hand[i] as key to retrieve point
+            print points
+       player () //dealer is a player class that takes no money
 
-method gameOver()
-    if startCash = 0
+fun roundOver()
 
-class dealer
+    print "Player cash:" = currentCash
+    if currentCash = 0
+        Print "Better call it a day. Black Jack Game Over"
+        end game
+    else if currentCash >
 
-    1. while incorrect input given display
-        choice 1 play
-            method deal(1) for dealer
-            assign points to dealerScore variable
-            deal(2) for player
-            assign point to playerScore variable
-            ask user for input on holding or hitting (control for input error)
-            if hold
-                deal(1) for dealer
-                    add card score to dealerScore
-                    if dealerScore > playerScore and less than 21
-                        print dealer wins
 
-        choice 2 quit
-        if choice 1
-        else if choice 2
-            end program
+
+
