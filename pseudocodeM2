@@ -3,12 +3,13 @@ Description: create a modified version of blackjack, user is dealt two cards, de
              or busts.
 
 Add packages to randomize
-create list representing deck
+create list representing the hands
+dictionary representing the deck and points
 // going to need some point handling system for cards (dictionary?)
 // need to keep track of bets wins and losses
 
 
-    func gamePlay()
+    class gamePlay()
         startCash = 0
         betCash = 0
         choice = ""
@@ -31,19 +32,18 @@ create list representing deck
             if betCash > currentCash
                 Print "Not enough cash for that!"
         create player (currentCash, betCash)
-        create dealer()
+        create player() // dealer player
 
 
      func round()
 
-        player.hand = deal(2)
+        player.hand.append = deal(2)
         player.displayHand()
         player.displayPoints()
-        dealer.hand = deal(1)
+        dealer.hand.append = deal(1)
         dealer.displayHand()
         dealer.displayPoints()
-        playerPoints = deal(2)
-        dealerPoints = deal(1)
+        choice2 = ""
         while player choice2 is hit
             choice2 = input (Stand or hit)
             playerPoints += deal(1)
@@ -71,11 +71,7 @@ create list representing deck
     func continueMenu()
         print
 
-    func deal(num)
-        for i =0 i< num i++
-            card[i] = deck[randomized index out of remaining no of cards]
-            pop equivalent of card i from deck
-            decrement remaining cards
+
 
 class pointSystem()
         cardPoints = dictionary of cards to points
@@ -92,6 +88,26 @@ class player ( currentCash, betCash)
             print points
        player () //dealer is a player class that takes no money
 
+       func displayHand()
+
+       func deal(num) // return array
+        for i in num
+            tempArray =[]
+
+            tempArray[i].append = deck[randomized index out of remaining no of cards]
+            pop equivalent of card i from deck
+            decrement deck  cards
+
+       }
+
+
+       func int displayPoints()
+            for i in hand[]
+                points += call of  cardpoints with key of hand[i]
+
+
+
+
 fun roundOver()
 
     print "Player cash:" = currentCash
@@ -99,7 +115,6 @@ fun roundOver()
         Print "Better call it a day. Black Jack Game Over"
         end game
     else if currentCash >
-
 
 
 
